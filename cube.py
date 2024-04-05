@@ -90,6 +90,6 @@ def sls(ctx: dict) -> list:
     "region": "us-west-2b",
     "site": "cubedev",
     "personalAccessToken": "treadwell_cube_demo",
-    "personalAccessTokenSecret": "OyD7jJqRQH299BZ6XxsaLg==:bwrPxhgHUGLZF4mGCTe2yDbmBg4DgcHQ"
+    "personalAccessTokenSecret": process.env.CUBEJS_TABLEAU_PAT_SECRET
   }
 }]
