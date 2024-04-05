@@ -79,3 +79,17 @@ def logger(message: str, params: dict) -> None:
 @config('context_to_api_scopes')
 def context_to_api_scopes(context: dict, default_scopes: list[str]) -> list[str]:
   return ['meta', 'data', 'graphql']
+
+@config('semantic_layer_sync')
+def sls(ctx: dict) -> list:
+    return [{
+  "type": "tableau-cloud",
+  "name": "Cube Dev Tableau Cloud Sync",
+  "config": {
+    "database": "Cube Cloud: treadwell_cube_demo",
+    "region": "us-west-2b",
+    "site": "cubedev",
+    "personalAccessToken": "treadwell_cube_demo",
+    "personalAccessTokenSecret": "OyD7jJqRQH299BZ6XxsaLg==:bwrPxhgHUGLZF4mGCTe2yDbmBg4DgcHQ"
+  }
+}]
