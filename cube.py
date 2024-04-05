@@ -90,6 +90,6 @@ def sls(ctx: dict) -> list:
     "region": "us-west-2b",
     "site": "cubedev",
     "personalAccessToken": "treadwell_cube_demo",
-    "personalAccessTokenSecret": process.env.CUBEJS_TABLEAU_PAT_SECRET
+    "personalAccessTokenSecret": os.environ['CUBEJS_TABLEAU_PAT_SECRET']
   }
 }]
